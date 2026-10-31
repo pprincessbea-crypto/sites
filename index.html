@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light in the Web | Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d194f5;
+            box-shadow: #f73a7f 0 3px 3px;
+            padding: 20px;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            background: #f3c1de;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            text-align: center;
+            color: #181817;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9655f0;
+            font-size: 29px;
+            margin-bottom: 10px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-shadow: black 1px 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #4f4b4b;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        label {
+            display: block;
+            color: #444444;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #d8d8d0;
+            border-radius: 7px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #7b8b6a;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 22px;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        .remember label {
+            margin-bottom: 0;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 13px;
+            background: #e99adb;
+            color: rgb(27, 27, 28);
+            border: none;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-button:hover {
+            background: #bd21d8;
+        }
+
+        .login-button:active {
+            transform: scale(0.97);
+        }
+
+        #errorMessage {
+            color: #d0004f;
+            font-size: 13px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #7621ed;
+            text-shadow: #fbf8f8 1px 1px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        .footer p:first-child {
+            font-weight: bold;
+        }
+
+        .page-footer {
+            position: fixed;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #777777;
+            font-size: 12px;
+            padding: 0 20px;
+        }
+
+        .page-footer hr {
+            max-width: 400px;
+            margin: 0 auto 12px;
+            border: none;
+            border-top: 1px solid #d8d2c5;
+        }
+
+        .page-footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .page-footer {
+                position: static;
+                margin-top: 25px;
+            }
+
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <p class="logo">UNA ANG GINOO</p>
+
+        <h1>Light in the Web</h1>
+
+        <p class="subtitle">
+            Welcome! A simple space for faith, learning,
+            and good values.
+        </p>
+
+        <form id="loginForm">
+
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+            >
+
+            <div class="remember">
+                <input type="checkbox" id="responsible">
+                <label for="responsible">
+                    I choose to be kind and honest online.
+                </label>
+            </div>
+
+            <p id="errorMessage" aria-live="polite"></p>
+
+            <button type="submit" class="login-button">
+                LOG IN
+            </button>
+
+        </form>
+
+        <div class="footer">
+            <p>Integrity • Compassion • Excellence</p>
+            <p>Sa Tangub City, Una ang Ginoo.</p>
+        </div>
+
+    </div>
+
+    <footer class="page-footer">
+        <hr>
+        <p>All Rights Reserved © 2026</p>
+        <p>CIC 111</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (username === "bea" && password === "12345") {
+                window.location.href = "page2.html";
+            } else {
+                errorMessage.textContent =
+                    "Wrong username or password. Please try again!";
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light in the Web | Faith and Kindness</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fcf8ff;
+            color: #494052;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #e8d8f8, #f9dce9);
+            padding: 25px 8%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 21px;
+            color: #6e4c86;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px 30px;
+            background: linear-gradient(135deg, #f7eafa, #fff0f5);
+        }
+
+        .small-title {
+            color: #9b69b0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        h5 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            text-shadow: 1px 1px #494052;
+            text-decoration: underline;
+            background-color: #9b69b0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            letter-spacing: 3px;
+            transition: 0.3s;
+        }
+
+        button {
+            background-color: #9b69b0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #c1166e;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px #c507f9;
+        }
+
+        h2 {
+            font-family: 'Franklin Gothic Medium',
+                         'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 2px;
+            color: #b64e87;
+            text-shadow: 1px 1px #494052;
+            text-align: center;
+            margin-top: 15px;
+            padding: 0 15px;
+        }
+
+
+        .reflection-box {
+            background-color: #f3e8ff;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 15px;
+            border: 1px solid #e0c8f5;
+            box-shadow: 0 4px 10px #00000010;
+            transition: 0.3s;
+        }
+
+        .reflection-box:hover {
+            background-color: #eec3d7;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px #d8b4e2;
+        }
+
+        .reflection-box h3 {
+            color: #b64e87;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-family: Georgia, serif;
+        }
+
+        .reflection-box p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+
+         .box {
+            background-color: #f3e8ff;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 15px;
+            border: 1px solid #e0c8f5;
+            box-shadow: 0 4px 10px #00000010;
+            transition: 0.3s;
+        }
+        .box h5 {
+            color: #edeef5;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-family: Georgia, serif;            
+        }
+
+        .box p {
+            color: rgb(51, 33, 47);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .prayer-gif {
+            display: block;
+            width: 120px;
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+         .prayer-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px #d97af3;
+        }
+
+        
+        .gif-image {
+            display: block;
+            width: 180px;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+         .gif-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px #dc7ff5;
+        }
+
+        .honesty-image {
+            display: block;
+            width: 200px;
+            max-width: 100%;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px #00000015;
+            transition: 0.3s;
+        }
+
+        .honesty-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px #d78cec;
+        }
+
+       
+         .back-button {
+            display: inline-block;
+            background-color: #9b69b0;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #c1166e;
+            transform: scale(1.05);
+        }
+
+
+        .footer {
+            text-align: center;
+            background-color: lightblue;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Light in the Web</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <p class="small-title">Faith • Integrity • Kindness</p>
+
+        <button type="button">
+            <h5>UNA ANG GINOO</h5>
+        </button>
+
+        <h2>My Faith, My Values, My Digital World</h2>
+    </section>
+
+    <div class="reflection-box">
+        <h3>Putting God First</h3>
+
+         <img
+        src="https://media.tenor.com/32chFngXx-EAAAAC/praying-hands.gif"
+        alt="Animated praying hands"
+        class="prayer-gif">
+                
+
+    <p>
+        As a student, I believe that putting God first means
+        allowing my faith to guide my decisions. Whenever I face
+        challenges, I try to remember the importance of patience,
+        kindness, and doing what is right. For me, faith is not
+        only about what I believe, but also about how I treat
+        other people.
+    </p>
+    </div>
+
+    <div class="reflection-box">
+        <h3>Choosing Honesty Every Day</h3>
+
+    <img
+        src="https://static.vecteezy.com/system/resources/previews/046/436/606/non_2x/a-woman-handing-a-box-to-a-girl-with-a-lost-and-found-sign-free-vector.jpg"
+        class="honesty-image">
+
+         <p>
+            I believe that honesty matters even when nobody is watching.
+            As a student, I should do my own work, respect other people's
+            ideas, and admit my mistakes. Being honest may not always be
+            easy, but it helps me become a better person.
+         </p>
+    </div>
+
+    <div class="reflection-box">
+        <h3> Think Before You Click </h3>
+
+        <img
+        src="https://th.bing.com/th/id/R.d8e3798813f3c88fa4d7b5fa3a77d63d?rik=D4EvPbdCZt5lxg&riu=http%3a%2f%2flapassionauboutdesdoigts.fr%2fwp-content%2fuploads%2f2014%2f03%2fStop-informatique.gif&ehk=bt4AxHn4K%2brAlgJq7AktPnynr2moOjXzNhJ570K5Gio%3d&risl=&pid=ImgRaw&r=0"
+        alt="Stop computer warning animation"
+        class="gif-image">
+
+        <p>
+            Technology helps us learn, communicate, and express ourselves. 
+            However, we should also be careful about what we post and share. 
+            I want to use technology to spread useful information, respect others 
+            online, and avoid sharing things that may hurt or mislead people.
+        </p>
+    </div>
+
+    <div class="box">
+
+        <center> <h5> !REMINDER!</h5> </center>
+
+        <p>
+            Let Your Light Shine.   Even through small actions,
+            we can show our faith, choose honesty, and use technology
+            to make a positive difference in the lives of others.
+        </p>
+    </div>
+
+
+    <center>
+        <a href="index.html" class="back-button">Back to First Page</a>
+        <a href="page3.html" class="back-button">Next Page</a>
+    </center>
+
+    <div class="footer">
+            All Rights Reserved &copy; 2026 <br>
+            CIC 111
+    </div>
+
+</body>
+</html>
